@@ -1,0 +1,251 @@
+header {
+    background-color: #fff ;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #88BBEE;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.5px;
+    word-spacing: 1.5px;
+    line-height: 20px;
+}
+
+#nav {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#page-logo img {
+    width: 70px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#hamitems {
+    display: flex;
+    list-style: none;
+    padding: 0; 
+}
+
+#hamitems li {
+    flex: 1;
+    white-space: nowrap;
+}
+
+#hamitems a {
+    padding: 10px 15px;
+    color: #000;
+    text-decoration: none;
+    text-align: center;
+    flex-grow: 1;
+    flex-basis: 0;
+    white-space: nowrap;
+    margin-right: 20px; 
+}
+
+#nav label, #hamburger {
+    display: none;
+}
+
+#hamitems a:hover, #hamitems a:active {
+    color: #34dbeb;
+}
+
+#hamitems li:nth-child(1) a {
+    background-color: #88BBEE;
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    border-style: double;
+}
+
+#cookie-notice {
+    position: relative;
+    bottom: 0; 
+    left: 0; 
+    width: 100%; 
+    color: #FFC72B; 
+    text-align: left;
+    z-index: 9999;
+    text-transform: uppercase;
+    margin-top: 30px;
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+h2{
+    color: #603284;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+p{
+    margin-top: 20px;
+}
+
+h2 + p{
+    float: left;
+}
+    
+.section{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    width: 80%;
+    margin: 10rem auto 0 auto;
+    margin-top: 30px;
+}
+
+.section img{
+    height: 250px;
+    border: 20px solid #fff;
+}
+
+.section h2{
+    margin: 0;
+    color: #603284;
+    font-style: italic;
+}
+
+.section p{
+    color: #000000;
+    margin-right: 15px;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.image-container {
+    display: flex; 
+    flex-direction: column; 
+}
+
+.image-container img {
+    max-width: 70%; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.learn-more-button {
+    display: inline-block;
+    padding: 30px 40px;
+    background-color: #FFF;
+    color: #9246CD;
+    text-decoration: none;
+    border: 1px black dotted;
+    border-radius: 5px;
+    font-size: 44px;
+    font-family: Verdana;
+    font-style: italic;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+/* MOBILE SCREEN */
+@media screen and (max-width: 768px) {
+    #nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    #page-logo {
+      order: 1;
+      margin-right: auto;
+    }
+  
+    #page-logo img {
+      width: 70px;
+      height: auto;
+    }
+  
+    #nav label {
+      display: inline-block;
+      color: #000;
+      background: #fff;
+      font-size: 2em;
+      font-style: normal;
+      padding: 10px;
+      cursor: pointer;
+      order: 2;
+    }
+  
+    #hamitems {
+      position: absolute;
+      left: 0;
+      right: 0;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      background-color: #5174AA;
+      color: #000000;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      border: 1px solid #000000;
+      border-style: double;
+      margin: 0;
+    }
+
+    #hamitems li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+  
+    #nav input:checked ~ #hamitems {
+      display: flex;
+      top: 0;
+    }
+  
+    #nav input:checked ~ #page-logo {
+      display: none;
+    }
+  
+    #reset-button:checked ~ #nav input {
+      display: none; 
+    }
+  
+    /* TEXT AND IMAGES*/
+    .section {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    h1{
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+        line-height: 1em;
+    }
+
+    .section p{
+        color: #000000;
+        margin-right: 15px;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    
+    .image-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+      
+    .learn-more-button{
+        display: none;
+    }
+}
+  
